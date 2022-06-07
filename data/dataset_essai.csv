@@ -1,0 +1,8 @@
+ID,compagnie,x2010,x2011,x2012,latitude,longitude,population,category,cat
+1,NESTLE,c,a,b,46.467,6.85,277559,fin,z
+2,ROCHE HOLDING ,c,b,c,47.561,7.591,246559,bat,z
+3,NOVARTIS 'R' ,c,e,d,47.561,7.591,195602,agr,z
+4,ABB LTD N ,c,c,a,47.379,8.54,45035,tech,u
+4,ADB,c,c,a,47.379,8.54,45035,tech,u
+4,ADV,c,c,a,47.379,8.54,45035,tech,x
+4,ABH,c,c,a,47.379,8.54,45035,tech,y

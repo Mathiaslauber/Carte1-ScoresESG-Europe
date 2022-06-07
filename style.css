@@ -1,0 +1,314 @@
+@import "https://fonts.googleapis.com/css?family=Comfortaa:300,700|Bungee+Shade|Josefin+Sans:400";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap";
+html,
+body,
+:root{
+    --color_title: #acadae;
+    --color_legend: #5d6164;
+    --color_axis: #dce0e1;
+    --background_color: #25282c;
+    --table_color: #00000000;
+    --form-control-color: rgb(20, 94, 185);
+    --backgrd:#25282c;
+}
+
+
+.Titre {
+    
+    position: absolute;
+    z-index: 7;
+    background-color: rgb(205, 35, 35);
+    text-align: center;
+    overflow: visible;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  
+
+}
+body {background-color: var(--backgrd); 
+    opacity: 0.9;}
+ 
+#timeline{
+    top: 40px;
+    width: 750px;
+    margin: 0 auto;
+  }
+  /* basic styling for the time-series elements */
+  .time-series {
+    width:110px;
+    background: #eee;
+    margin:0;
+    padding:0;
+    text-align:center;
+    line-height: 40px;
+    float: left;
+  } 
+
+   /* styles for the active time-series element */
+   .active {
+    background: #b4b4b4;
+    color:white;
+  }
+  .overlay {
+    fill: none;
+    pointer-events: all;
+  }
+
+  #rectangle{
+    
+    position: relative;
+    margin:auto;    
+    width:50%;
+    height:120px;
+    border-radius: 10px;
+    border-color: #ffffff00;
+    border-width: 0.15em;
+    vertical-align: middle;
+    z-index: 3;
+    text-align: center;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+
+/*----------H1----------------*/
+
+h1 {
+    position: relative;
+    color: var(--color_title);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    line-height: 40px;
+    margin: 0 0 0;
+    padding: 10px 300px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+/*---------H2-----------------*/
+
+h2 {
+    color: var(--color_title);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 5px 0 24px;
+    padding: 0 300px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+/*----------H3----------------*/
+
+h3 {
+    color: var(--color_legend);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 15px;
+    margin: -12px 0 24px;
+    padding: 0 300px;
+    text-align: left;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+/* Radio button */
+
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+}
+
+
+.form-control {
+    position :absolute;
+    top: 125px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #dce0e1;
+    display: grid;
+    grid-template-columns: 1em 1em;
+    gap: 1em;
+    
+} 
+   .form-control + .form-control {
+    margin-top: 1em;
+    
+}
+/* .form-control:focus-within {
+    color: var(--form-control-pin);
+  }*/
+
+input[type="radio"] {
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: #fff;
+
+    margin: 0;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 220ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+
+}
+
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+
+/*-----------------CARTE CHOROPLETHE------------------------*/
+#mapdiv {
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    left: 150px;
+    width: 900px;
+    height: 630px;
+    padding: 5px;
+    background-color: #696969;
+    border: 3px solid  var(--color_title);
+    border-radius: 5px;
+}
+
+div.tooltip_map {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 40px;
+    left: 5px;
+    width: 420px;
+    height: 90px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: rgba(5, 255, 5, 0);
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    visibility: "hidden";
+}
+
+div.sidebar {
+    position: relative;
+    top: 115px;
+    left: 1050px;
+    width: 430px;
+    height: calc(630px);
+    /*min-height: 90%;
+    bottom: 10%;*/
+    background-color: rgba(17, 17, 17, 0.183);
+    border-radius: 5px;
+    border: 5px solid var(--color_title);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-style: outset;
+    border-left:unset;
+    border-top: unset;
+}
+
+td,
+th {
+    border: 2px solid #1c87c9;
+    padding: 9px;
+    border-color:rgba(233, 12, 12, 0);
+}
+
+td {
+    text-align: center;
+    border: 2px solid #1c87c9;
+    padding: 9px;
+    border-color:rgba(233, 12, 12, 0);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(196, 11, 11, 0);
+}
+
+th[scope="col"] {
+    background-color: #67bae400;
+    border-color: var(--color_legend);
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    color: var(--color_legend);
+}
+
+th[scope="row"] {
+    background-color: #7fa6b900;
+    text-align: right;
+    border-color:var(--color_legend);
+    border-left:unset;
+    border-bottom: unset;
+    border-top: unset;
+}
+/* LE TEXTE DANS LE TABLEAU*/
+td[scope="stat"] {
+    background-color: #219edd00;
+    color: var(--color_axis);
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid #1c87c9;
+    letter-spacing: 1px;
+    padding: 9px;
+    font-family: sans-serif;
+    font-size: .9rem;
+    color: var(--color_legend);
+    border-right: violet;
+    empty-cells: hide;
+}
+
+
+/* hover des bubbles pour tous les graphs*/
+
+.bubbles {
+    stroke-width: 1px;
+    stroke: grey;
+    opacity: .8
+}
+
+.bubbles:hover {
+    stroke: rgb(133, 133, 133);
+    stroke-width: 4px !important;
+    opacity: 0.9 !important;
+}
+
