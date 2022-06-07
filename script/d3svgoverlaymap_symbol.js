@@ -113,7 +113,7 @@ function map_symbol() {
     
     var color = d3.scaleOrdinal()
       .domain(["a", "b", "c", "d", "e", "f"])
-      .range(["#d73027","#fee08b", "#fdae61", "#d9ef8b", "#66bd63", "#1a9850"])
+      .range(["#d73027", "#fdae61", "#fee08b", "#d9ef8b", "#66bd63", "#1a9850"])
      
     /*
      // create a colorscale
