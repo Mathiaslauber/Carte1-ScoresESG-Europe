@@ -92,7 +92,7 @@ function map_symbol() {
         .duration(200)
       tooltip
         .style("opacity", 1)
-        .html("<table>" + "<thead>" + "<tr>" + "<th>Lieu :</th>" + "<th>population</th>" + "<th>% vacance</th>" + "<th>Nombre logements</th>" + "</tr>" + "</thead>" + "<tbody>" + "<tr>" + "<td>" + d.Compagnie + "</td>" + "<td>" + d.pop + "</td>" + "<td>" + d.x2010 + "</td>" + "<td>" + d.Population + "</td>" + "</tr>" + "</tbody>" + "</table>")
+        .html("<table>" + "<thead>" + "<tr>" + "<th>Compagnie</th>" + "<th>secteur</th>" + "<th>ID</th>" + "<th>Ville</th>" + "</tr>" + "</thead>" + "<tbody>" + "<tr>" + "<td>" + d.Compagny + "</td>" + "<td>" + d.Description_5 + "</td>" + "<td>" + d.Numeric_code + "</td>" + "<td>" + d.ADDRESSCITY + "</td>" + "</tr>" + "</tbody>" + "</table>")
         //"Il s'agit de la ville de : " + d.name + )
         .style("left", (d3.mouse(this)[0] + 30) + "px")
         .style("top", (d3.mouse(this)[1] + 30) + "px")
@@ -430,18 +430,12 @@ function map_symbol() {
 
 
       ////////////////////////////////////////////////////////////////////////
-        // valeur minimale de la légende
-      svg_chorop.append("text")
-      .attr("x", 35).attr("y", 350)
-      .text("min : 0.1")
-      .style("fill", colorlegend)
-      .style("font-size", "12px")
-      .attr("alignment-baseline", "middle")
+
 
       // Titre de la  légende 
       svg_chorop.append("text")
       .attr("x", 0).attr("y", 15)
-      .text("Scores ESG [0-100]")
+      .text("Score [0-100]")
       .style("fill", colortitle)
       .style("font-size", "19px")
       .attr("alignment-baseline", "middle")
@@ -470,7 +464,7 @@ function map_symbol() {
       // SELECTION SUR LE SECTEUR ECONOMIQUE -----------------..............................................................................................//
       //-------------------------------------------------------............................................................................................//
       //-------------------------------------------------------...........................................................................................//
-      var ecosize = 30
+     /* var ecosize = 30
       var ecosector = ["z","u", "x", "y"]
       var ecokeys = ["z", "u", "x", "y"]
 
@@ -488,14 +482,12 @@ function map_symbol() {
         .attr("width", ecosize)
         .attr("height", ecosize)
         .style("fill", "#110808")
-        /*.style("fill", function(d) {
-          return mycolor(d)
-        })*/
+       
         .style("stroke", "#DCDCDC")
         .on("mouseover", highlight)
         .on("mouseleave", noHighlight)
   
-  
+        
       // Ajouter les chiffres percentiles aux carrés
       svg_chorop.selectAll("mylabels")
         .data(ecokeys)
@@ -534,16 +526,16 @@ function map_symbol() {
       .text(function(d) {
         return '\uf8cc'
       })
-   
+     */
 
- 
+      
       // ------------------------------------------------------------//
       //      CERCLE TAILLE : LEGENDES NOMBRE DE LOGEMENTS TOTAUX   //
       // ----------------------------------------------------------//
       //var valuesToShow = ["50'000", "150'000", "300'000", "600'000"]
       //50000;150000;300000;600000
       // The scale you use for bubble size
-      var size = d3.scaleSqrt()
+      /*var size = d3.scaleSqrt()
         .domain([0, 661505]) // valeur max correspond à Zurich agglo
         .range([1, 52]) // taille max du cercle selon la correction de Flannery
   
@@ -606,7 +598,7 @@ function map_symbol() {
         .style("fill", colorlegend)
         .attr('alignment-baseline', 'middle')
   
-  
+      /*
       // Legend title
       svg_chorop.append("text")
         .attr('x', xCircle + 15)
@@ -627,7 +619,7 @@ function map_symbol() {
         .style("fill", colorlegend)
         .style("text-decoration", "italic")
         .style("letter-spacing", "-0.9px");
-        
+        */
       /*
     var annotations = [
       {

@@ -120,6 +120,61 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    color: var(--color_title);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 15px;
+    margin: 0px 0 24px;
+    padding: 0 15px;
+    text-align: center;
+    z-index: 1;
+    text-transform: uppercase;
+}
+h5 {
+        color: var(--color_title);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        font-weight:lighter;
+        font-style: italic;
+        line-height: 15px;
+        margin: 0px 0 24px;
+        padding: 0px;
+        text-align: left;
+        z-index: 1;
+        text-transform: uppercase;
+    }
+
+
+
+h6 {
+    color: var(--color_title);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 5px 0 15px;
+    padding: 0 00px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+h7 {
+    color: var(--color_title);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 17px;
+    margin: 5px 0 15px;
+    padding: 0 00px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    
+
+
+
 /* Radio button */
 
 *,
